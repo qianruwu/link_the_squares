@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoadingViewController" customModule="qwu_final" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsQ-Aj-zRI">
+                                <rect key="frame" x="0.0" y="483" width="375" height="73"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="48"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MPZ-07-Arz" kind="show" id="3xm-am-R0m"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="mjJ-cJ-Ss8">
+                                <rect key="frame" x="67" y="213" width="240" height="240"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link The Squares" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDq-74-NYM">
+                                <rect key="frame" x="0.0" y="122" width="375" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="iYy-6X-RWz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="33"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="-2"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PDq-74-NYM" firstAttribute="centerX" secondItem="mjJ-cJ-Ss8" secondAttribute="centerX" id="74d-xH-g7K"/>
+                            <constraint firstItem="mjJ-cJ-Ss8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A9w-si-Csc"/>
+                            <constraint firstItem="bsQ-Aj-zRI" firstAttribute="top" secondItem="mjJ-cJ-Ss8" secondAttribute="bottom" constant="30" id="LvI-JT-N9V"/>
+                            <constraint firstItem="PDq-74-NYM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="UDP-9d-9nM"/>
+                            <constraint firstItem="mjJ-cJ-Ss8" firstAttribute="top" secondItem="PDq-74-NYM" secondAttribute="bottom" constant="21" id="aoy-Wn-xz5"/>
+                            <constraint firstItem="mjJ-cJ-Ss8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="er6-w0-Wy3"/>
+                            <constraint firstItem="PDq-74-NYM" firstAttribute="trailing" secondItem="bsQ-Aj-zRI" secondAttribute="trailing" id="etg-Cw-cAK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bsQ-Aj-zRI" secondAttribute="bottom" constant="111" id="h3E-Uf-u50"/>
+                            <constraint firstItem="PDq-74-NYM" firstAttribute="leading" secondItem="bsQ-Aj-zRI" secondAttribute="leading" id="nqB-sA-GP7"/>
+                            <constraint firstAttribute="trailing" secondItem="PDq-74-NYM" secondAttribute="trailing" id="oUh-z1-SXz"/>
+                            <constraint firstItem="PDq-74-NYM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rkZ-M5-Zvu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="124"/>
+        </scene>
+        <!--Win View Controller-->
+        <scene sceneID="KEa-0S-sBL">
+            <objects>
+                <viewController id="aMY-lU-Dxg" customClass="WinViewController" customModule="qwu_final" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZkA-NZ-FVF"/>
+                        <viewControllerLayoutGuide type="bottom" id="1oG-my-TIY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdR-7l-mEq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5J-Qa-zwQ">
+                                <rect key="frame" x="91" y="86" width="193" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="nuo-Mb-BFs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.11031060138007709" blue="0.13199928086688772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square3" translatesAutoresizingMaskIntoConstraints="NO" id="WPV-R0-OTQ">
+                                <rect key="frame" x="42" y="181" width="290" height="289"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgT-1F-lIW">
+                                <rect key="frame" x="133" y="488" width="109" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HTy-q2-oCv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MPZ-07-Arz" kind="show" id="Uzo-fe-oYY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUk-FE-ngw">
+                                <rect key="frame" x="-39" y="535" width="453" height="50"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="Main Page">
+                                    <color key="titleColor" red="0.68648873730000004" green="0.3825218681" blue="0.0014201066709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uIe-E5-Gob"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WPV-R0-OTQ" firstAttribute="centerX" secondItem="IgT-1F-lIW" secondAttribute="centerX" id="6Kn-vQ-lPu"/>
+                            <constraint firstItem="1oG-my-TIY" firstAttribute="top" secondItem="AUk-FE-ngw" secondAttribute="bottom" constant="82" id="Qz2-mb-088"/>
+                            <constraint firstItem="IgT-1F-lIW" firstAttribute="top" secondItem="WPV-R0-OTQ" secondAttribute="bottom" constant="18" id="UIi-ta-lRQ"/>
+                            <constraint firstItem="WPV-R0-OTQ" firstAttribute="top" secondItem="ZkA-NZ-FVF" secondAttribute="bottom" constant="161" id="dYQ-1D-Tti"/>
+                            <constraint firstItem="1oG-my-TIY" firstAttribute="top" secondItem="IgT-1F-lIW" secondAttribute="bottom" constant="129" id="ePP-xz-8I8"/>
+                            <constraint firstItem="WPV-R0-OTQ" firstAttribute="leading" secondItem="bdR-7l-mEq" secondAttribute="leadingMargin" constant="26" id="hQr-D1-vw7"/>
+                            <constraint firstItem="IgT-1F-lIW" firstAttribute="centerX" secondItem="AUk-FE-ngw" secondAttribute="centerX" id="oNw-A7-Dga"/>
+                            <constraint firstItem="E5J-Qa-zwQ" firstAttribute="centerX" secondItem="WPV-R0-OTQ" secondAttribute="centerX" id="pOW-yg-FAx"/>
+                            <constraint firstItem="AUk-FE-ngw" firstAttribute="top" secondItem="WPV-R0-OTQ" secondAttribute="bottom" constant="65" id="qX2-m8-Y8i"/>
+                            <constraint firstItem="AUk-FE-ngw" firstAttribute="leading" secondItem="bdR-7l-mEq" secondAttribute="leadingMargin" constant="-55" id="wWQ-Kh-3Q5"/>
+                            <constraint firstItem="E5J-Qa-zwQ" firstAttribute="top" secondItem="ZkA-NZ-FVF" secondAttribute="bottom" constant="66" id="yqU-0P-elo"/>
+                            <constraint firstItem="WPV-R0-OTQ" firstAttribute="centerX" secondItem="bdR-7l-mEq" secondAttribute="centerX" id="z3o-4A-RUn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="winView" destination="bdR-7l-mEq" id="pgv-Nm-Eqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIU-hQ-oCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="1113"/>
+        </scene>
+        <!--Lose View Controller-->
+        <scene sceneID="5Q1-Uh-Xqs">
+            <objects>
+                <viewController id="Dh2-fK-Fk7" customClass="LoseViewController" customModule="qwu_final" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Gl-55-1eE"/>
+                        <viewControllerLayoutGuide type="bottom" id="2tY-IZ-xtu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O82-Yj-NQR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Lose..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiV-Fc-uN1">
+                                <rect key="frame" x="44" y="74" width="286" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="1tq-SR-NBP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cci-wO-XvS">
+                                <rect key="frame" x="86" y="473" width="202" height="80"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MPZ-07-Arz" kind="show" id="UOI-fc-V0K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAy-DH-KVk">
+                                <rect key="frame" x="97" y="538" width="180" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="USv-h9-oKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="Main Page">
+                                    <color key="titleColor" red="0.68648873730000004" green="0.3825218681" blue="0.0014201066709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xcy-91-qd1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square6" translatesAutoresizingMaskIntoConstraints="NO" id="5C7-OS-PBW">
+                                <rect key="frame" x="41" y="176" width="292" height="291"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZiV-Fc-uN1" firstAttribute="centerX" secondItem="5C7-OS-PBW" secondAttribute="centerX" id="2nd-EH-rKF"/>
+                            <constraint firstItem="WAy-DH-KVk" firstAttribute="top" secondItem="5C7-OS-PBW" secondAttribute="bottom" constant="71" id="DuJ-53-qe1"/>
+                            <constraint firstItem="2tY-IZ-xtu" firstAttribute="top" secondItem="WAy-DH-KVk" secondAttribute="bottom" constant="79" id="OSX-es-xEv"/>
+                            <constraint firstItem="5C7-OS-PBW" firstAttribute="top" secondItem="ZiV-Fc-uN1" secondAttribute="bottom" constant="-7" id="Pff-Fg-ahk"/>
+                            <constraint firstItem="WAy-DH-KVk" firstAttribute="leading" secondItem="O82-Yj-NQR" secondAttribute="leadingMargin" constant="81" id="TNJ-gp-mm7"/>
+                            <constraint firstItem="Cci-wO-XvS" firstAttribute="leading" secondItem="O82-Yj-NQR" secondAttribute="leadingMargin" constant="70" id="XlX-b8-s3m"/>
+                            <constraint firstItem="ZiV-Fc-uN1" firstAttribute="leading" secondItem="O82-Yj-NQR" secondAttribute="leadingMargin" constant="28" id="Ydx-t4-PkL"/>
+                            <constraint firstItem="Cci-wO-XvS" firstAttribute="centerX" secondItem="WAy-DH-KVk" secondAttribute="centerX" id="ZrZ-Ir-ZJu"/>
+                            <constraint firstItem="5C7-OS-PBW" firstAttribute="centerX" secondItem="Cci-wO-XvS" secondAttribute="centerX" id="aYb-Rm-bmd"/>
+                            <constraint firstItem="Cci-wO-XvS" firstAttribute="top" secondItem="5C7-OS-PBW" secondAttribute="bottom" constant="6" id="bUb-m2-BQ3"/>
+                            <constraint firstItem="5C7-OS-PBW" firstAttribute="leading" secondItem="O82-Yj-NQR" secondAttribute="leadingMargin" constant="25" id="jqw-ho-3p4"/>
+                            <constraint firstItem="ZiV-Fc-uN1" firstAttribute="centerX" secondItem="O82-Yj-NQR" secondAttribute="centerX" id="kcA-eM-c7i"/>
+                            <constraint firstItem="2tY-IZ-xtu" firstAttribute="top" secondItem="Cci-wO-XvS" secondAttribute="bottom" constant="114" id="kdG-dz-xIY"/>
+                            <constraint firstItem="ZiV-Fc-uN1" firstAttribute="top" secondItem="3Gl-55-1eE" secondAttribute="bottom" constant="54" id="xNV-3k-QKj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xTe-dA-wpG"/>
+                    <connections>
+                        <outlet property="loseView" destination="O82-Yj-NQR" id="g7Q-pa-6fT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zmk-GY-S5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="1114"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="dhb-mf-9kL">
+            <objects>
+                <viewController id="MPZ-07-Arz" customClass="PlayViewController" customModule="qwu_final" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EMk-4x-KsX"/>
+                        <viewControllerLayoutGuide type="bottom" id="WoF-7j-TPu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dqk-Xn-7D5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Countdown:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MY4-aT-f8M">
+                                <rect key="frame" x="31" y="95" width="140" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAa-Tr-qHF">
+                                <rect key="frame" x="182" y="95" width="188" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeJ-nV-RR2">
+                                <rect key="frame" x="95" y="534" width="184" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="SCL-rD-AJR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="End Game">
+                                    <color key="titleColor" red="0.68648873730000004" green="0.3825218681" blue="0.0014201066709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="MPZ-07-Arz" eventType="touchUpInside" id="DX2-db-mTj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="endGameSegue" id="Dys-51-YgO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YeJ-nV-RR2" firstAttribute="centerX" secondItem="Dqk-Xn-7D5" secondAttribute="centerX" id="4gn-S8-scX"/>
+                            <constraint firstItem="WoF-7j-TPu" firstAttribute="top" secondItem="YeJ-nV-RR2" secondAttribute="bottom" constant="48" id="OG8-TK-W2Q"/>
+                            <constraint firstItem="YeJ-nV-RR2" firstAttribute="leading" secondItem="Dqk-Xn-7D5" secondAttribute="leadingMargin" constant="79" id="wSQ-wr-VDi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDown" destination="wAa-Tr-qHF" id="j3M-c0-fdK"/>
+                        <segue destination="Dh2-fK-Fk7" kind="show" identifier="loseSegue" id="GJJ-nk-PeT"/>
+                        <segue destination="aMY-lU-Dxg" kind="show" identifier="winSegue" id="gBl-tf-1OG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rp6-Ij-kYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loading" width="512" height="512"/>
+        <image name="square3" width="512" height="512"/>
+        <image name="square6" width="512" height="512"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uzo-fe-oYY"/>
+        <segue reference="uIe-E5-Gob"/>
+    </inferredMetricsTieBreakers>
+</document>
