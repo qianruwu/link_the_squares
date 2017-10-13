@@ -6,6 +6,12 @@
 //  Copyright © 2017 Qianru Wu. All rights reserved.
 //
 
+/*
+ *  This snippet of code contains main logic and excecution of the game.
+ *  It is a formal submission file for a course project.
+ *  It shows my coding style.
+ */
+
 import UIKit
 
 // shuffle method applied to array
@@ -58,7 +64,7 @@ class PlayViewController: UIViewController {
         return point
     }
 
-    // return a full index array of all images, including gray image (boundaries)
+    // return a full index array of all images, including gray image (background image)
     func getFullIndex () -> [Int] {
         var fullIndex = Array<Int>(repeating: -1, count: 100)
         for i in 0...99 {
@@ -100,6 +106,7 @@ class PlayViewController: UIViewController {
         if (x < initX) || (x > initX + side * 10) || (y < initY) || (y > initY + side * 10) {
             return -99      // index that is not in the image area
         }
+        
         // get distances in x and y
         let dx = Float(x) - Float(initX)
         let dy = Float(y) - Float(initY)
